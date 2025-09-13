@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch</title>
 </head>
+
 <body>
 
     <script>
-       var n = parseInt(prompt("Enter Number"));
+        //    var n = parseInt(prompt("Enter Number"));
 
-       switch (n) {
-        case 1 :
-            document.write("One")
-            break;
-        case 2 :
-            document.write("Two");
-            break;
+        //    switch (n) {
+        //     case 1 :
+        //         document.write("One")
+        //         break;
+        //     case 2 :
+        //         document.write("Two");
+        //         break;
 
-        case 3: 
-           document.write("Three")
+        //     case 3: 
+        //        document.write("Three")
 
-        default: 
-           document.write("Enter The Number between 1 to 3 ");
+        //     default: 
+        //        document.write("Enter The Number between 1 to 3 ");
 
-       }
-   
+        //    }
+
+
+        //    Case for multiple value
+        
+        function f1() {
+            var product = prompt("Enter Product Name")
+
+            switch (product) {
+                case "Mobile":
+                case "Watch":
+                case "TV":
+                case "Laptop":
+                    document.write(`You Selected ${product}From Electronic Catogary `)
+                    break;
+                case "T-shirt":
+                case "Shirt":
+                case "Jenes":
+                    document.write(`You are selected ${product} From Cloth Catogary`);
+                    break;
+
+                default:
+                    document.write(`${product}Not Found <br> please check the speling`)
+
+            }
+
+
+        }
+        f1()
+
     </script>
-    
+
 </body>
+
 </html>
