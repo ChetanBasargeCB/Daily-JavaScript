@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternory Operator</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+
+
+    <script>
+        function stockcheck() {
+            let stocks = document.getElementById("stock");
+
+            document.getElementById("lblstock").textContent = (stocks.checked===true)?"Out of stock":"Available"
+        }
+        function liked() {
+            let heart = document.getElementById("hearticon")
+
+            heart.className(heart.className==true)?"bi bi-heart-fill":"bi bi-heart"
+          
+        }
+    </script>
+</head>
+
+<body>
+    <div class="m-4">
+        <input type="checkbox" id="stock" onchange="stockcheck()" placeholder="#">
+        <label id="lblstock">Available</label>
+
+    </div>
+
+   <div class="m-4">
+
+    <button  class="btn" onclick="liked()"><span id="hearticon" class="bi bi-heart">ok</span></button>
+
+   </div>
+
+
+
+</body>
+
+</html>

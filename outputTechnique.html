@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input-Method</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        
+        
+    }
+
+    .alert {
+    
+        padding: 10px;
+    
+    } 
+
+    button {
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+    }
+
+</style>
+
+<body>
+
+    <!-- Alert  -->
+    <div class="container">
+        <div class="alert">
+            <h1> Alert()</h1>
+            <p>it is a poup message box of browser window</p>
+
+            <p>it can display any string or result of epression </p>
+
+            <h2>Syntax
+                alert(10+20)
+
+            </h2>
+            <h2>
+                alert("Addition ="+(10+20))
+
+            </h2>
+
+            <p> line brake in alert</p>
+            <h2>alert("line-1 \n line-2 \n line-3 ")</h2>
+
+            <br>
+
+            <button onclick="alerts()"> Click here </button>
+        </div>
+
+        <!-- Cancle -->
+        <div class="confirm">
+
+            <h1>Confirm()</h1>
+            <p>it is similar to alert</p>
+            <p>But allows to cancel</p>
+            <p> it is boolen method that return
+                <br>
+                true : on Ok
+                <br>
+                false : on Cancel
+            </p>
+
+
+            <h2> Syntax</h2>
+            <h3>Confirm("message/ expression")</h3>
+
+            <button onclick="conf()"> Click here </button>
+
+            
+
+            
+
+
+
+
+        </div>
+
+        
+
+    </div>
+
+    <script>
+       
+
+        function alerts () {
+
+             alert("Addition =" + (10 + 20))
+            
+        }
+          // confirm
+
+        function conf () {
+                let result = confirm("Message")
+
+         if (result == true) {
+            
+            alert ("Deleted Successfully..");
+         }
+         else {
+            alert("Canceled..")
+         }
+
+        }
+       
+      
+     
+    </script>
+
+
+
+
+</body>
+
+</html>
