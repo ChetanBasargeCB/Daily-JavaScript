@@ -1,21 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        // 1Write a program to swap two numbers without using a third variable.
 
+        let a = 10
+        let b = 20
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        console.log(a, b)
+
+        // Check if a string is a palindrome.
+
+        function Palindrome(str) {
+            let reversed = str.split("").reverse().join("")
+            return reversed === str;
+        }
+
+        console.log(Palindrome("madam"))
+
+        //  Count vowels in a string
+
+        function countVowels(str) {
+            let vowels = "aeiouAEIOU";
+            let count = 0;
+            for (let char of str) {
+                if (vowels.includes(char)) count++;
+            }
+            return count;
+        }
+        console.log(countVowels("Hello World"));
+
+        // 1. Write a function to find the range of value, check if the given value is with the range of 
+
+       function FindRange (value,min,max) {
+        if (value>=min && value<=max) {
+            console.log(`Your${value} is in the range of ${min} and ${max}`)
+        } 
+        else {
+            console.log(`Your${value} is not in the range of ${min} and ${max}`)
+            
+        }
+       }
+    FindRange(20,20,30)
+
+    // 2. Write a function that finds and prints the greatest among 3 numbers.
+
+    function FindLargest (a,b,c) {
+        if (a>b && a>c) {
+            console.log (`${a} is the Largest Number`)
+        }
+        else if (b>c) { 
+            console.log(`${b} is the Largest Number`)
+
+        } else {
+            console.log (`${c}is the Largest Number`)
+        }
+    }
+    FindLargest(20,30,25)
+
+    </script>
 
 </head>
+
 <body>
-    
+
     <h1>textContent </h1>
-   <h2>Syntax <br>
-      
-    document.querySelector("P").textContent="Welcome"
-       
+    <h2>Syntax <br>
+
+        document.querySelector("P").textContent="Welcome"
+
     </h2>
 
 
 </body>
+
 </html>
