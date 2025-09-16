@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methos</title>
+    <script>
+
+        //🔴 using Map ()
+
+        // Given an array of names, return a new array with all names in uppercase.
+
+        const names = ["chetan", "raj", "amit"];
+
+        let Upper_case = names.map(a => a.toUpperCase())
+
+        console.log(Upper_case)
+
+        // Multiply every number in [2, 4, 6, 8] by 5.
+
+        let num = [2, 4, 6, 8]
+
+        let num_1 = num.map(num => num * 5)
+
+        console.log(num_1);
+
+        // 🔴 using Filetr ()
+
+        // From [12, 5, 20, 8, 130, 44], filter numbers greater than 10.
+
+
+        let num_2 = [12, 5, 20, 8, 130, 44]
+
+        let greater = num_2.filter(num => num > 10)
+
+        console.log(greater)
+
+
+        // From ["apple", "banana", "kiwi", "mango"], keep only words with length > 5.
+
+        let fruit = ["apple", "banana", "kiwi", "mango"]
+
+        let bigFruit = fruit.filter(a => a.length > 5)
+
+        console.log(bigFruit)
+
+
+        // 🔴Using .reduce():
+
+        // Find the product of [1, 2, 3, 4, 5].
+
+        let add = [1, 2, 3, 4, 5]
+
+        let product = add.reduce((sum, val) => sum + val)
+
+        console.log(product)
+
+        // 🔴✅ Find the maximum number in [50, 20, 70, 10, 90].
+
+        let numbers_1 = [50, 20, 70, 10, 90]
+
+        let maxNum = numbers_1.reduce((a, b) => (a > b ? a : b), numbers_1[0])
+
+        console.log(maxNum)
+
+        //    🔥 Combination Practice
+
+        // From [1, 2, 3, 4, 5, 6, 7, 8] →
+
+        // First even numbers
+
+        // Then square 
+
+        // Then sum them using
+
+        // (Final Output = 120)
+
+        let combo = [1, 2, 3, 4, 5, 6, 7, 8]
+
+        let even = combo.filter(num=> num%2===0)
+
+        let squre = even.map(num=>num*num)
+
+        let sum = squre.reduce((sum,val)=>sum+val)
+
+        
+        console.log(sum)
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Important Methods of Array in JS</h1>
+    <p>Problems and answers</p>
+
+</body>
+
+</html>
