@@ -64,7 +64,7 @@
 
         console.log(maxNum)
 
-        //    🔥 Combination Practice
+        //   🔥 Combination Practice
 
         // From [1, 2, 3, 4, 5, 6, 7, 8] →
 
@@ -78,18 +78,43 @@
 
         let combo = [1, 2, 3, 4, 5, 6, 7, 8]
 
-        let even = combo.filter(num=> num%2===0)
+        let even = combo.filter(num => num % 2 === 0)
 
-        let squre = even.map(num=>num*num)
+        let squre = even.map(num => num * num)
 
-        let sum = squre.reduce((sum,val)=>sum+val)
+        let sum = squre.reduce((sum, val) => sum + val)
 
-        
+
         console.log(sum)
 
+        //toString() --> it prints  all element in the array   
 
-        
-        
+        let collection = [1, 2, 3, "Chetan", 4]
+
+        console.log(collection.toString())
+
+
+
+        // find() : It can find and return the first occurrence element that pass the condition
+
+        console.log(collection.find(num => num > 2))
+
+
+        // splice () : it add element in specific index 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
