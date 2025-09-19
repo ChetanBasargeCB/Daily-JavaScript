@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+
+    <script>
+        let product = {
+            name: "Apple",
+            price: 850000,
+            Qty: 1,
+            Total: function () {
+                return this.Qty * this.price
+            },
+            Print: function () {
+                document.write(`Name = ${this.name} <br> Price = ${this.price}`)
+            }
+
+
+        }
+
+        // convert obj into array or access all element in the object
+
+        // Object.Keys()
+
+        let elemet = Object.keys(product)
+
+        console.log(elemet)
+
+
+
+        //  2. How to remove any key?
+
+        // A. By using JavaScript “delete” operator. 
+
+        // delete Objectname.keys
+
+        delete product.name
+
+        console.log(product)
+
+
+        // 4. How to find a key?
+        //  By using JavaScript “in” operator. It returns true if key is available in specified object.
+        
+        //    “key” in object_name;        // true if key exists 
+
+        let collection = {
+            name : "Chetan",
+            age : 22,
+            designation : "Software Developer",
+            location : "Bengluru"
+
+
+
+        }
+
+        if ("designation" in collection) {
+            document.write("Chetan is Software Developer")
+        }
+        else (
+            document.write("Chetan is still not Software Developer")
+        )
+
+
+        // We can also create a obeject  using 1) new Object
+
+        let obj = new Object();
+        obj.name = "Chetan"
+        obj.age = 21
+
+        console.log(obj)
+
+        //2) Object.create ()
+        
+        let proto = {
+            greet : "Hi!!"
+            
+        }
+
+        let obj2 = Object.create(proto);
+          obj2.name ="Ganesh"
+
+          console.log(obj2)
+
+
+
+     //     Using Class
+
+       class Person {
+        constructor(name, age) {
+            this.name =name;
+            this.age=age
+        }
+       }
+
+       let obj3 =new Person("David",40)
+
+       console.log(obj3)
+
+
+
+
+ 
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <h1>We are going to learn Js Object</h1>
+
+    <h2>What is an Object in JS?</h2>
+
+    <p>An object is a collection of key–value pairs.</p>
+
+
+
+</body>
+
+</html>
