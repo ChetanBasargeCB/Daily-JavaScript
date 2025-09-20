@@ -1,0 +1,40 @@
+Important Notes of  Fectch in Javascript
+
+fecth is asych it retruns resolve either reject
+
+Syntax =>
+
+fetch (url, {options})
+
+.then (respons=>respons.json)
+
+.then(data=>console.log(data))   // you can accsses data using data.name,id or anything you wont form API
+
+.catch(error=>console.error(error))
+
+
+
+
+The Fetch API is a modern way to make HTTP requests (like GET, POST, PUT, DELETE) from the browser.
+here 
+GET = to get data (it is default)
+
+POST = to add data
+
+PUT = it is to update data
+
+DELETE = to delet data
+
+
+Respons status 
+
+HTTP Responses status code indicates, wheter a specific HTTP resquest has been successfuly completed 
+
+Respons in five grp
+
+successful Respons :(200-299)
+
+Client error Respons : (400-499)
+
+Server error Respons : (500-599)
+
