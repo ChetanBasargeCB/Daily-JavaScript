@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+    
+    <script>
+        function Preson (fname,lname) {
+            this.firstname= fname;
+            this.lastname = lname;
+
+
+        }
+
+        Preson.prototype.age=22   // Here is Prototype inheritance
+
+        //how you should  print the full name ..?
+        Preson.prototype.Fullname=function() {
+           return this.firstname +" "+ this.lastname
+        }
+
+        let Preson1 = new Preson("Chetan","Basarge")
+
+        console.log(Preson1)
+        
+        //Accessing inheritance
+        console.log(Preson1.age)
+        console.log(Preson1.Fullname())
+
+        //🔴 Chainging the Prototye Value
+
+        Preson.prototype ={age: 25}
+
+        let Preson2 = new Preson ("Greet", "Stack")
+
+        console.log(Preson2.age)
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <h1 >Today we learn Prototype Inheritance</h1>
+    <h2>Prototype is Propertie of Object <br>
+        Prototypes is itself of Prototype that was create a protype chain
+    </h2> <br> <br>
+   <h2> Chainging Prototye value</h2>
+    <h2>If Prototye has changed then all the object have a new value <br> Old object have same value </h2>
+    
+</body>
+</html>
