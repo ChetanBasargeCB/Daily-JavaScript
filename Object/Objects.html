@@ -44,14 +44,14 @@
 
         // 4. How to find a key?
         //  By using JavaScript “in” operator. It returns true if key is available in specified object.
-        
+
         //    “key” in object_name;        // true if key exists 
 
         let collection = {
-            name : "Chetan",
-            age : 22,
-            designation : "Software Developer",
-            location : "Bengluru"
+            name: "Chetan",
+            age: 22,
+            designation: "Software Developer",
+            location: "Bengluru"
 
 
 
@@ -74,36 +74,57 @@
         console.log(obj)
 
         //2) Object.create ()
-        
+
         let proto = {
-            greet : "Hi!!"
-            
+            greet: "Hi!!"
+
         }
 
         let obj2 = Object.create(proto);
-          obj2.name ="Ganesh"
+        obj2.name = "Ganesh"
 
-          console.log(obj2)
+        console.log(obj2)
 
 
 
-     //     Using Class
+        //     Using Class
 
-       class Person {
-        constructor(name, age) {
-            this.name =name;
-            this.age=age
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age
+            }
         }
-       }
 
-       let obj3 =new Person("David",40)
+        let obj3 = new Person("David", 40)
 
-       console.log(obj3)
-
+        console.log(obj3)
 
 
+        // Object Constructor & this keyword
 
- 
+
+        function Preson(name, lastname) {
+            this.name = name;
+            this.lastname = lastname;
+        }
+
+        let Preson1 = new Preson('Pramod', "Pujari")
+
+        
+        let Preson2 = new Preson('Chetan', "Basarge")
+
+        Preson2.age = 22;
+
+        console.log(Preson1)
+
+        console.log(Preson2)
+
+
+
+
+
+
 
 
 
