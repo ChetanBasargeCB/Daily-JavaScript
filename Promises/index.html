@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<script>
+    // Create a Promise that randomly resolves or rejects after 1 second. Handle both cases using .then() and .catch().
+
+ const ticket = new Promise ( (resolve, reject)=>{
+    const greet = false;
+    setTimeout(()=> {
+         if(greet) {
+        resolve("Hello World")
+    }else {
+        reject("error text not found ")
+    }
+ 
+
+    },1000)
+   
+ })
+
+ ticket.then((data)=> {
+    console.log(data)
+ }).catch((data)=> {
+    console.log(data)
+ }).finally(()=> {
+    console.log("I will Always Exicute")
+ })
+    
+    
+
+
+</script>
+<body>
+    <h1>Welcome to JS Promises and Asyn/ Await</h1>
+    <p>In JS Promises Are good way to handel aysnchronouns operation</p>
+    <p>It is used to find out if asyn operation is successfully completed or not</p>
+
+    <table>
+        <dt>Promises Have three state</dt>
+        <dd>1.Pending</dd>
+        <dd>2.Fullfield (.then)</dd>
+        <dd>3.Reject (.reject)</dd>
+
+    </table>
+
+
+
+    
+</body>
+</html>
