@@ -13,14 +13,14 @@
 
     }
     user("chetan", 22, "Hyderabad")  // here we pass parameter with order
-    
+
     // Rest Parametres 
-    function Product (...prams) {
-        let collection =[id,Name,Price]=prams
+    function Product(...prams) {
+        let collection = [id, Name, Price] = prams
         console.log(`Produnct id is ${id}, Name is ${Name} and price is ${Price} `)
     }
 
-    Product(1,"TV",25000)  // Passing Parameter Using Rest parameters
+    Product(1, "TV", 25000)  // Passing Parameter Using Rest parameters
 
 </script>
 
@@ -36,6 +36,12 @@
                 - Rest parameter must be defined along with other parameters, but it must be the
             </p>
             <p> last parameter in formal list.</p>
+        </li>
+        <li>
+            <h2>FAQ: What is difference between “Rest” & “Spread”?</h2>
+            <p>
+                Ans: “Rest” is single parameter that can handle multiple arguments.</p>
+            <p> “Spread” is one argument that can spread into multiple parameters.</p>
         </li>
         </li>
     </ol>
