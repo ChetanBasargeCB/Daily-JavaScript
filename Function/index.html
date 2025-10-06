@@ -22,14 +22,36 @@
 
     Product(1, "TV", 25000)  // Passing Parameter Using Rest parameters
 
+    // Function Clouser
+    
+     function Outer(){
+
+         var x = 10;
+
+         function Inner(){
+
+            var y = 20;
+
+            return x + y;
+
+         }
+
+         console.log(`Addition=${Inner()}`);
+
+     }
+
+     Outer();
+
 </script>
 
 <body>
     <h1>Welcome to Javascript Function World</h1>
     <ol>
-        <li>Function Parameters <p> - A function can have multiple parameters.</p>
+        <li><b>Function Parameter</b>
+            <p> - A function can have multiple parameters.</p>
             <p>- Every parameter is a required parameter and has order dependency</p>
-        <li>Rest Parameter
+        </li>
+        <li><b>Rest Parameter</b>
             <p>
                 - Every function can have only one “Rest” parameter.</p>
             <p>
@@ -43,7 +65,24 @@
                 Ans: “Rest” is single parameter that can handle multiple arguments.</p>
             <p> “Spread” is one argument that can spread into multiple parameters.</p>
         </li>
+
+        <li> <b>Function With Return</b></li>
+        <p>A function is void by default. </p>
+        <p> Void refers to “no-return”.</p>
+        <p>- It will not return the memory of a function after the function call. </p>
+        <p> - You can use “return” as jump statement inside function, so that it can return the function memory and
+            alive in mempry.</p>
+        <li><b>Function currying.</b>
+            <p>A function returns another function within the context is known as Fuction currying</p>
+
         </li>
+        <li><b>
+                Function Closure </b>
+            <p>Closure is a mechanism of configuring function scope, </p>
+            <p>Outer function member cand access inner function member that is known as Clouser</p>
+        </li>
+
+
     </ol>
 
 </body>
