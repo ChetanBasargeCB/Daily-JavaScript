@@ -23,24 +23,69 @@
     Product(1, "TV", 25000)  // Passing Parameter Using Rest parameters
 
     // Function Clouser
-    
-     function Outer(){
 
-         var x = 10;
+    function Outer() {
 
-         function Inner(){
+        var x = 10;
+
+        function Inner() {
 
             var y = 20;
 
             return x + y;
 
-         }
+        }
 
-         console.log(`Addition=${Inner()}`);
+        console.log(`Addition=${Inner()}`);
 
-     }
+    }
 
-     Outer();
+    Outer();
+
+    // IIFE
+    (function () {
+
+        console.log("Anonymous Function");
+
+    })(); // IIFE
+
+    // Function Recoursion
+
+    function f1() {
+
+        console.log("Hy this is recoursion");
+
+        setInterval(f1, 3000);
+
+    }
+
+    //  f1();  this function calls itself infite time
+
+    // Function Chaining 
+    function Names() {
+
+        return {
+
+            f1() {
+                console.log("F1 Called")
+                return this
+            },
+
+            f2() {
+                console.log("F2 Called")
+                return this
+            }
+
+        }
+
+    }
+
+    Names().f1().f2() 
+    Names().f2().f1()    // here is no order dependeacny
+    
+
+
+
 
 </script>
 
@@ -81,6 +126,26 @@
             <p>Closure is a mechanism of configuring function scope, </p>
             <p>Outer function member cand access inner function member that is known as Clouser</p>
         </li>
+        <li><b>
+                Anonymous Function</b>
+            <p>
+                Anonymous Function</p>
+            <p>- Anonymous functions a mostly used in function expression and function callback.</p>
+            <p>- Anonymous function is enclosed in a “( )” and invoked by using IIFE technique. </p>
+            <p>
+                [Immediately Invoking Function Expression]</p>
+        </li>
+        <li><b>Function Recursion:</b>
+            <p>it is technique where function calls it self inside the context</p>
+            <p>
+                It is mostly used to create batch operations and design complex computations. </p>
+        </li>
+        <li><b>Function Chaining</b>
+            <p>- It is a mechanism of configuring a function that can invoke other functions in the context.</p>
+            <p>- It will not have any order dependency in accessing functions a chain. </p>
+            <p> - The context memory must be object type and can be accessed using “this” keyword.</p>
+        </li>
+
 
 
     </ol>
