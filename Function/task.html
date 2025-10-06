@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Question</title>
+</head>
+<script>
+    function Table(num,i=1){
+        if(i>10){
+            return 
+        } 
+           console.log(`${num} X ${i}= ${num*i}`) 
+        
+        Table(num, i+1)
+    }
+
+    Table(5)
+
+    //Create a function to print all even numbers from 1 to 20 using recursion
+    function Even(n){
+        if(n==0){
+            return 1
+        } else if(n%2===0){
+            console.log(n)
+        }
+        Even(n-1)
+    }
+    Even(20)
+    
+</script>
+<body>
+    <h1>
+        Coding Question
+    </h1>
+    <ol>
+        <li>Create a multiplication table for specified number using Recursion.</li>
+        <li>Create a function to print all even numbers from 1 to 20 using recursion</li>
+    </ol>
+    
+</body>
+</html>
