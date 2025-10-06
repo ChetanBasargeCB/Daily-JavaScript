@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function In Javascript</title>
+</head>
+<script>
+    // parameters 
+    function user(name, age, cityname) {  // parameters 
+        console.log(`Your name is ${name} age is ${age} and your current  City is ${cityname}`)
+
+    }
+    user("chetan", 22, "Hyderabad")  // here we pass parameter with order
+    
+    // Rest Parametres 
+    function Product (...prams) {
+        let collection =[id,Name,Price]=prams
+        console.log(`Produnct id is ${id}, Name is ${Name} and price is ${Price} `)
+    }
+
+    Product(1,"TV",25000)  // Passing Parameter Using Rest parameters
+
+</script>
+
+<body>
+    <h1>Welcome to Javascript Function World</h1>
+    <ol>
+        <li>Function Parameters <p> - A function can have multiple parameters.</p>
+            <p>- Every parameter is a required parameter and has order dependency</p>
+        <li>Rest Parameter
+            <p>
+                - Every function can have only one “Rest” parameter.</p>
+            <p>
+                - Rest parameter must be defined along with other parameters, but it must be the
+            </p>
+            <p> last parameter in formal list.</p>
+        </li>
+        </li>
+    </ol>
+
+</body>
+
+</html>
