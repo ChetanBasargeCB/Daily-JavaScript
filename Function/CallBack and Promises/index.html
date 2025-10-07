@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Callback & Promises</title>
-  </head>
-  <script>
+</head>
+<script>
     // Callback function Example
     function FetchData(url, success, fail) {
-      if (url === "http://filpkart") {
-        success("Data Fetch Successfuly");
-      } else {
-        fail("Error: Something went wrong");
-      }
+        if (url === "http://filpkart") {
+            success("Data Fetch Successfuly");
+        } else {
+            fail("Error: Something went wrong");
+        }
     }
 
-    FetchData(
-      prompt("Enter Url"),
-      (msg) => console.log(msg),
-      (err) => console.log(err)
-    );
+    // FetchData(
+    //     prompt("Enter Url"),
+    //     (msg) => console.log(msg),
+    //     (err) => console.log(err)
+    // );
 
     // Promises
-   
-    let Fetchurl = new Promise((resolve,reject)=>{
-        let url=prompt("Enter Promise Url") 
-        if(url==="http://filpkart"){
-            reslove("Data Fetched.. By Promises") 
-        } else{
+
+    let Fetchurl = new Promise((resolve, reject) => {
+        // let url = prompt("Enter Promise Url")
+        if (url === "http://filpkart") {
+            reslove("Data Fetched.. By Promises")
+        } else {
             reject("Check Url again.. by Promises")
         }
-        
+
     })
 
     // calling promises
 
-    Fetchurl.then(msg=>console.log(msg)).catch(err=>console.log(err)).finally(()=>console.log("Request Ended"))
-  </script>
+    // Fetchurl.then(msg => console.log(msg)).catch(err => console.log(err)).finally(() => console.log("Request Ended"))
+</script>
+<style>
+   
+    p,pre{
+        font-size: 20px;
+        font-weight: 200;
+    }
+    
+</style>
 
-  <body>
+<body>
     <h1>Welcome to Function Callback & Promises Page</h1>
     <ol>
-      <li>
-        <h2>Function Callback</h2>
-        <p>
-          - Callback is technique of configuring a set of functions, so that it
-          executes the matching
-        </p>
-        <p>- It uses “Synchronous” technique, which is a blocking mechanism.</p>
-        <p>
-          - It will block all other requests while processing the current
-          request
-        </p>
-        <pre>
+        <li>
+            <h2>Function Callback</h2>
+            <p>
+                - Callback is technique of configuring a set of functions, so that it
+                executes the matching
+            </p>
+            <p>- It uses “Synchronous” technique, which is a blocking mechanism.</p>
+            <p>
+                - It will block all other requests while processing the current
+                request
+            </p>
+            <pre>
   Syntax=     function Name(f1, f2) {
                   f1(data);
 
                   f2(data)
           }
 
-       Name(function(){ f1 data }, function(){ f2 data })</pre
-        >
-      </li>
-      <li>
-        <h2>Promises</h2>
-        <p>
-          - Promise in JavaScript is just like a real world promise made to
-          perform specified action.
-        </p>
-        <p>- It returns “resolve” on success and “reject” on failure.</p>
-        <p>- It is an asynchronous function. It uses unblocking technique.</p>
-        <p>
-          - “Resolve” is configured using “then()” and “Reject” is configured
-          using “catch()”.
-        </p>
-        <p>-“finally()” executes always.</p>
-        <p>- You can configure multiple then() blocks to execute on success.</p>
-        <pre> Syntax =
+       Name(function(){ f1 data }, function(){ f2 data })</pre>
+        </li>
+        <li>
+            <h2>Promises</h2>
+            <p>
+                - Promise in JavaScript is just like a real world promise made to
+                perform specified action.
+            </p>
+            <p>- It returns “resolve” on success and “reject” on failure.</p>
+            <p>- It is an asynchronous function. It uses unblocking technique.</p>
+            <p>
+                - “Resolve” is configured using “then()” and “Reject” is configured
+                using “catch()”.
+            </p>
+            <p>-“finally()” executes always.</p>
+            <p>- You can configure multiple then() blocks to execute on success.</p>
+            <pre> Syntax =
               const name = new Promise(function(resolve, reject){
 
                    if(condition){
@@ -96,7 +104,22 @@
 
                    .finally(function(){})
         </pre>
-      </li>
+        </li>
+
+        <li>
+            <h2>Asynchronous Functions async & await</h2>
+            <p> - Function is by default synchronous and uses a blocking technique to access data.</p>
+            <p> - You can make it “async” so that it can “await” while reading the data.</p>
+            <p>- JavaScript ES6+ version makes all asynchronous functions as promise.</p>
+            <pre>
+                Syntax:
+
+                   async function Name(){
+                        return await value;
+                                   }
+            </pre>
+        </li>
     </ol>
-  </body>
+</body>
+
 </html>
