@@ -29,6 +29,47 @@
 
     let obj3 = new demo() 
     obj3.print()          // ---- Static Number is 3 & Num is 1
+
+    // Normal Example
+    class car {
+        brand="unknown"
+        static wheels=4
+
+        constructor(name){
+            this.brand=name
+        }
+        showbrand(){
+            console.log(`Car Brand is ${this.brand} and wheels are ${car.wheels}  `)
+        }
+
+    }
+
+    let car1= new car("BMW")
+    car1.showbrand()
+
+    let car2 = new car("Audi")
+    car2.showbrand()
+
+//Create a class Student that:Has a static property count (to count how many students are created).Has a non-static property name for each student.Each time a new student is created, increase the count by 1.
+    class student {
+    static count=0
+    name="unknow"
+    constructor(name){
+        this.name =name
+        student.count = student.count +1
+    }
+    showcount(){
+        console.log(`Student name is ${this.name} count is ${student.count}`)
+        
+    }
+}
+
+let student1 = new student("Chetan")
+obj.showcount()
+
+let student2 = new student("Deepak")
+obj2.showcount()
+
 </script>
 
 <body>
