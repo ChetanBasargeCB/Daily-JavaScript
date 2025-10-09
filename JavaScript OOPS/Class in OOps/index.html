@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class</title>
 </head>
+<script>
+    // Property of Class with static and non-static
+
+    class demo {
+        static Number = 1;
+          Num = 1;
+          constructor(){
+            demo.Number= demo.Number+1
+            this.Num= this.Num + 1
+          }
+          print(){
+            console.log(` Static  Number =${demo.Number} and Non-Static Number = ${this.Num} `)
+          }
+    }
+
+    let obj = new demo()       // Inheritance of class 
+    obj.print()               //  OutPut---- Static Number is 2 & Num is 2 
+    
+    let obj2 = new demo()    // 
+    obj2.print()            // ---- Static Number is 2 & Num is 1
+
+    let obj3 = new demo() 
+    obj3.print()          // ---- Static Number is 3 & Num is 1
+</script>
 
 <body>
     <h1>JavaScript OOPS</h1>
