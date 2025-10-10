@@ -6,69 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class</title>
 </head>
+<style>
+    li {
+        font-size: 20px;
+        font-weight: 500px;
+
+    }
+</style>
 <script>
     // Property of Class with static and non-static
 
     class demo {
         static Number = 1;
-          Num = 1;
-          constructor(){
-            demo.Number= demo.Number+1
-            this.Num= this.Num + 1
-          }
-          print(){
+        Num = 1;
+        constructor() {
+            demo.Number = demo.Number + 1
+            this.Num = this.Num + 1
+        }
+        print() {
             console.log(` Static  Number =${demo.Number} and Non-Static Number = ${this.Num} `)
-          }
+        }
     }
 
     let obj = new demo()       // Inheritance of class 
     obj.print()               //  OutPut---- Static Number is 2 & Num is 2 
-    
+
     let obj2 = new demo()    // 
     obj2.print()            // ---- Static Number is 2 & Num is 1
 
-    let obj3 = new demo() 
+    let obj3 = new demo()
     obj3.print()          // ---- Static Number is 3 & Num is 1
 
     // Normal Example
     class car {
-        brand="unknown"
-        static wheels=4
+        brand = "unknown"
+        static wheels = 4
 
-        constructor(name){
-            this.brand=name
+        constructor(name) {
+            this.brand = name
         }
-        showbrand(){
+        showbrand() {
             console.log(`Car Brand is ${this.brand} and wheels are ${car.wheels}  `)
         }
 
     }
 
-    let car1= new car("BMW")
+    let car1 = new car("BMW")
     car1.showbrand()
 
     let car2 = new car("Audi")
     car2.showbrand()
 
-//Create a class Student that:Has a static property count (to count how many students are created).Has a non-static property name for each student.Each time a new student is created, increase the count by 1.
+    //Create a class Student that:Has a static property count (to count how many students are created).Has a non-static property name for each student.Each time a new student is created, increase the count by 1.
     class student {
-    static count=0
-    name="unknow"
-    constructor(name){
-        this.name =name
-        student.count = student.count +1
-    }
-    showcount(){
-        console.log(`Student name is ${this.name} count is ${student.count}`)
-        
-    }
-}
+        static count = 0
+        name = "unknow"
+        constructor(name) {
+            this.name = name
+            student.count = student.count + 1
+        }
+        showcount() {
+            console.log(`Student name is ${this.name} count is ${student.count}`)
 
-let student1 = new student("Chetan")
-obj.showcount()
+        }
+    }
 
-let student2 = new student("Deepak")
-obj2.showcount()
+    let student1 = new student("Chetan")
+    obj.showcount()
+
+    let student2 = new student("Deepak")
+    obj2.showcount()
 
 </script>
 
@@ -106,22 +113,35 @@ obj2.showcount()
             <li>All other members in class are by default “non-static” or dynamic. </li>
             <li>Dynamic refers to “discreet memory”. </li>
             <li>It is good for handling disconnected operations. </li>
-            <li> Non Static members are accessible within class by using “this” keyword and outside class by using instance of class. [object]</li>
+            <li> Non Static members are accessible within class by using “this” keyword and outside class by using
+                instance of class. [object]</li>
         </ul>
 
-          <h2>2.Accessor</h2>
-          <li>Accessors are used to have fine grained control over the property.</li>
-          <li>They are used for handling read and write operations on a property.</li>
-          <li> They are classified into 2 types</li>
-          <ol>
-            <li> get - getter</li>
-            <li>Set - setter</li>
-          </ol>
-          <li>“Getter” is used to read and return value of a property.</li>
-          <li> “Setter” is used to assign a new value into property. </li>
+        <h2>2.Accessor</h2>
+        <ul>
+            <li>Accessors are used to have fine grained control over the property.</li>
+            <li>They are used for handling read and write operations on a property.</li>
+            <li> They are classified into 2 types</li>
+            <ol>
+                <li> get - getter</li>
+                <li>Set - setter</li>
+            </ol>
+            <li>“Getter” is used to read and return value of a property.</li>
+            <li> “Setter” is used to assign a new value into property. </li>
+        </ul>
+         <h2>3.Method in Class</h2>
+        <ul>
+           
+            <li>It is used to refactor the code.</li>
+            <li>Class allows a function for refactoring but not as class member</li>
+            <li>Hence logic in class is handled by using a method.</li>
+            <li> It is accessible within class by using class name if configured as static or by using “this” keyword if
+                configured as non static. </li>
+            <li> - It is accessible outside class by using instance of class if it is non-static</li>
+        </ul>
     </ul>
 
-  
+
 </body>
 
 </html>

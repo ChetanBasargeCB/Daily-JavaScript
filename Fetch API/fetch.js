@@ -22,21 +22,50 @@ fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
 
 // Fetch data using asycn/await and try catch {}
 
+// const FetchData = async()=>{
+//     try{
+//         const response = await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+       
+//         if(!response.ok){
+//             throw new Error(console.log("Could not fetch data")) // if condition satisfys then new error prints 
+            
+//         }
+//          const data = await response.json() // always convert json after the condtion if you convert json before the condtion if any error comes then new error cant shows, shows only catch error  
+//         console.log(data.name)
+
+//     }
+//     catch (error){
+//         console.error(error,"Check url again")
+//     }
+// }
+
+// FetchData()
+
+
+// Fetching Pokemon Mini Project
+
 const FetchData = async()=>{
     try{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+        const pokemonName = document.getElementById("pokemon").value.toLowerCase()
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
        
         if(!response.ok){
-            throw new Error(console.log("Could not fetch data")) // if condition satisfys then new error prints 
+            throw new Error(console.log("Could not fetch data")) 
             
         }
-         const data = await response.json() // always convert json after the condtion if you convert json before the condtion if any error comes then new error cant shows, shows only catch error 
-        console.log(data.name)
+         const data = await response.json()
+         const PokeomonImage= data.sprites.front_default
+         const Image = document.getElementById("Sprite")
+
+         Image.src=PokeomonImage
+         Image.style.display="block"
+   
 
     }
     catch (error){
-        console.error(error,"Check url again")
+        console.error(error,"Check the Pokemon Name again")
     }
 }
 
 FetchData()
+
