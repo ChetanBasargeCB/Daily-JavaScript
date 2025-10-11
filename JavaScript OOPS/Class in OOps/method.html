@@ -48,12 +48,15 @@
             return this.Qutntity * this.Price
         }
         print(){
-            document.write(`Name=${this.Name}<br> Price=${this.Price}<br> Model=${this.Model}, Qutntiy=${this.Qutntity} Total=${this.total}`)
+            document.write(`Name=${this.Name}<br> Price=${this.Price}<br> Model=${this.Model}, Qutntiy=${this.Qutntity} Total=${this.total()}`)
         }
         
     }
+  // here we added code of instace 
 
-
+    let obj = new Product()
+    obj.Qutntity=parseInt(prompt("Enter Quntity"))   //  using instace we add prompt for user will be enter quntity
+    obj.print()
 
 
 
