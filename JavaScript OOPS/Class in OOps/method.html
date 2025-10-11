@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods and Constructor</title>
+
+    <script>
+
+        // in this example insert, update and delete are the Methods of objects 
+        // you can access them outside using instance tecnique
+    class Database{
+        insert(){
+            document.write("Data Inserted")
+        }
+
+        update(){
+            document.write("Data Update")
+        }
+        delete(){
+            document.write("Data Deleted")
+        }
+    }
+    function InsertClick(){
+        let obj = new Database()
+        obj.insert()
+    }
+
+    function UpdateClick(){
+        let obj = new Database()
+        obj.update()
+    }
+    function DeleteClick(){
+        let obj =new Database()
+        obj.delete()
+    }
+    
+
+    </script>  
+</head>
+<body>
+    <h1>Examples Of Methos and Class</h1>
+    
+    <button onclick="InsertClick()" >Insert</button>
+    <button onclick="UpdateClick()">Update</button>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>
