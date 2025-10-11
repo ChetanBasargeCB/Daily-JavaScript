@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+    <script>
+
+        // Example of Constructor
+          class Database{
+
+            constructor(dbName){    // constructor is exicutes automatically for every methods and instances
+
+                document.write(`Connected with ${dbName} database..<br>`);
+
+            }
+
+            Insert(){
+
+                document.write("Record Inserted");
+
+            }
+
+            Update(){
+
+                document.write("Record Updated Successfully..");
+
+            }
+
+            Delete(){
+
+                document.write("Record Deleted");
+
+            }
+
+        }
+
+        function InsertClick(){
+            
+            let obj = new Database(document.querySelector("select").value);  // here passing parameter for constructor
+            obj.Insert()
+
+        }
+
+            
+        function UpdateClick(){
+            
+            let obj = new Database(document.querySelector("select").value);  // here passing parameter for constructor
+            obj.Update()
+
+
+        }
+
+        function DeleteClick(){
+            
+            let obj = new Database(document.querySelector("select").value);  // here passing parameter for constructor
+            obj.Delete()
+
+        }
+    
+        
+    </script>
+</head>
+<body>
+    <h1>Constructor</h1>
+    <ul>
+        <li>It is configured using “constructor” keyword. </li>
+        <li>Every class has a default constructor.</li>
+        <li>Constructor is a special type of sub-routine that executes automatically for every object.</li>
+
+    </ul>
+
+        <select>
+
+        <option>Select Database</option>
+
+        <option>Oracle</option>
+
+        <option>MySQL</option>
+
+        <option>MongoDB</option>
+
+    </select>
+    <h1>Data Base Selection Operator Example</h1>
+    <button onclick="InsertClick()">Insert</button>
+
+    <button onclick="UpdateClick()">Update</button>
+
+    <button onclick="DeleteClick()">Delete</button>
+
+    
+</body>
+</html>
