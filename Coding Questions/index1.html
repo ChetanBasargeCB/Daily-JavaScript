@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+ //1. Write a JavaScript function to calculate the sum of two numbers.  
+        function add(a,b){
+            console.log(a+b)
+        }
+
+        add(5,2)  // 7
+
+        // 2 Write a JavaScript program to find the maximum number in an array. 
+        // in this problem we use Math.max() 
+
+        function MaxNum(arry){
+            return Math.max(...arry)
+        }
+        console.log("The maximum no in the array is",MaxNum([1,2,4,66,3,5])) //66
+
+
+        // 3. Write a JavaScript function to check if a given string is a palindrome
+        //  (reads the same forwards and backwards). 
+
+        // first we understand what is palindrome 
+        // palindrome meansa word, phrase, or sequence that reads the same backwards as forwards, e.g. madam 
+       //---- We can solve this problem in two ways 1) using bulit-in mehods 2) without buil-in method
+ //    1) using bulit-in mehods
+
+       function palindrome(str){
+           let a = str.toLowerCase()
+            return a === str.split('').reverse().join("").toLowerCase()
+        }
+        console.log(palindrome("Madam")) //true
+
+  //  2) without buil-in method
+
+        function Palin(str){
+            let low = str.toLowerCase()
+            let a = low.split("");
+            let b = a.reverse()
+            let add = b.join("")
+            return low===add
+        }
+        console.log(Palin("Madam")) // true
+
+// 4. Write a JavaScript program to reverse a given string.
+    function Reverse(str){
+        return str.split("").reverse().join("")
+    }
+
+    console.log(Reverse("Hello World"))  //dlroW olleH
+
+// 5  Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers
+  // in this promble we have to use nethod filter()
+    function Even(arr){
+        return arr.filter(num=>num%2===0)
+    }
+    console.log(Even([1,2,3,4,5,6,7])) // [2,4,6]
+
+//6.Write a JavaScript program to calculate the factorial of a given number.
+    // in this problem we use Recursion method
+    function Factorial(n){
+        if(n===1){
+            return 1
+        }else{
+          return  n* Factorial(n-1)
+        }
+    }
+    console.log(Factorial(5)) //120
+
+//7. Write a function that calculate sum of all num in the arry
+  // for solving this problem we use reduce() mehtod
+    function ArrySum(arry){
+        return arry.reduce((acc,curr)=>acc+curr,0)
+    }
+    console.log(ArrySum([10,20,30,40])) // 100
+
+// 8. Remove Duplicate from Array
+  // in this problem we use Set()
+ // ---- A Set is a built-in object that only stores unique values. If you pass an array to a Set, it will automatically filter out any duplicates.
+    
+  function removeDuplicate(arry){
+    return [... new Set(arry)]
+  }
+
+  console.log(removeDuplicate([1,1,2,3,3,4,5,5])) // [1,2,3,4,5]
+
+// 9. Swap the value of variables without using third variables
+  let a = 10;
+  let b = 20;
+  b = b -a
+  a = a + b
+  console.log(a,b) // a = 20, b =10
+
+//10.Implement a function that takes two sorted arrays and merges them into a single sorted array
+//  without using any built-in sorting functions. 
+ function MergeArray(arr1,arr2){
+    let a = [...arr1,...arr2].sort((a,b)=> a-b)
+    console.log(a)
+ }
+
+ MergeArray([1,3,5],[2,4,6])
+ 
+
+    </script>
+<body>
+    <h1>Welcome To Javascript Coding Practices Page</h1>
+    <h2>Important for Developing Logic </h2>
+    <h2>10 Basic JavaScript coding questions</h2>
+    
+</body>
+</html>
