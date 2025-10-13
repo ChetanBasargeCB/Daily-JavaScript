@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance </title>
+</head>
+
+<script>
+    // --- Example of Inheritance Class
+
+    class HDFC_Bank {
+     version1 = "Version 1"
+     print(){
+        console.log(this.version1)
+     }
+    }
+
+    class HDFC_Bank2 extends HDFC_Bank {
+        version = "Version 2"
+        print(){
+            super.print();
+            console.log(this.version)
+        }
+    }
+    let obj = new HDFC_Bank2()
+    obj.print()
+
+</script>
+<body>
+    <h1>#Inheritance in JavaScript</h1>
+    <ul>
+        <h2>Inheritance</h2>
+        <li> It is the process of accessing members of one class in another by configuring relationship between classes.</li>
+        <li> A class can extend another class.</li>
+        <li>The existing class is known as "Super" Class</li>
+        <li>The extend class is known as "Derived" Class</li>
+        <li>It does not require instance of class</li>
+    </ul>
+
+
+    
+</body>
+</html>
