@@ -26,6 +26,26 @@
     let obj = new HDFC_Bank2()
     obj.print()
 
+
+    // Example 2
+       class thief {
+        run = "thif Run away"
+        print(){
+            console.log(this.run)
+        }
+    }
+
+    class police extends thief {
+        catch = "police catched thief"
+        print(){
+            super.print()
+            console.log(this.catch)
+        }
+    }
+    let obj1 = new police()
+    obj1.print()
+
+
 </script>
 <body>
     <h1>#Inheritance in JavaScript</h1>
