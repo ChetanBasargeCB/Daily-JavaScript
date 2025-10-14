@@ -6,6 +6,28 @@
     <title>Event-Loop</title>
 
 </head>
+<script>
+    // event loop exicution example
+    console.log("First Task")
+    function event(){
+        console.log("Second Task")
+        setTimeout(third=>{
+            console.log("Third Task")
+        },0)
+        let last = new Promise (resolve=>{
+            resolve("Fourth Task")
+        })
+
+        last.then(msg=>{
+            console.log(msg)
+        })
+    }
+    event()
+    //  gusses the output
+    // Output is => firs task, second task,Fourth Task,Third task
+    
+
+</script>
 <body>
     <h1>Event Loop</h1>
     <ul>
