@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+</head>
+    <Script>
+        function ProductClick(...details){
+            var product =[id,name,price,cities,rating]=details
+             document.write(`Id=${id}<br>Name=${name}<br>Price=${price}<br>Cities=${cities}<br>Rating=${rating.rate}`)
+
+        }
+
+    </Script>
+
+<body>
+    <h1>JavaScript Events</h1>
+
+    <h2>What is Event handler?</h2>
+    <ul>
+        <li>JavaScript provides various events like click, change, blur, focus, keyup, etc.</li>
+        <li>here clicl is event</li>
+        <li>onclick is Event handler</li>
+
+    </ul>
+
+    <h2> What is Event Listener?</h2>
+    <ul>
+        <li>Event Listener allows to configure event for html element dynamically. </li>
+        <li>Ex- addEventlistener</li>
+    </ul>
+    <h2>What are Event Arguments?</h2>
+    <ul>
+        <li>The default event arguments allow to send specific details to function.</li>
+        <li> Event arguments are used to carry the payload. </li>
+        <li>Payload is the data carried from one location to another.</li>
+        <li> Element have 2 default arguments a) this b) event </li>
+        <li> You can send any type of data as event arguments </li>
+        <li>Click here to Product details by event👇</li>
+        <!--  here we pass arguments in using event araguments  -->
+        <button onclick="ProductClick(1,'TV', 250000,['Hyd','Delhi'],{rate:4.5})" >Product</button>
+
+    </ul>
+    
+
+</body>
+
+</html>
