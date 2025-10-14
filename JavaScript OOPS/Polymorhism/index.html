@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polymorphism</title>
  <script>
- 
+   class Zebra {
+    eat="Zebra is Vegiterian"
+    print(){
+        console.log(this.eat)
+    }
+
+   }
+
+   class Lion extends Zebra{
+    eats="Lion is Non-Vegiterian"
+    print(){
+        super.print()
+        console.log(this.eats)
+    }
+    
+   }
+   let obj = new Lion()
+   obj.print()
  </script>
 </head>
 <body>
