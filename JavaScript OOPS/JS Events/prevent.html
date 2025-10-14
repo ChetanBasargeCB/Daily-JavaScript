@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent default</title>
+    <script>
+        function Submit(){
+            alert("Data Posted To Server")
+        }
+    </script>
+</head>
+<body>
+    <h1> How to prevent the default actions of any generic element?</h1>
+    <ul>
+        <li>HTML generic elements have pre-defined functionality, which executes automatically </li>
+        <li> every time on request. You can prevent the default by using event method </li>
+        <h2>“preventDefault()”.</h2>
+    </ul>
+
+    <form onsubmit="Submit()">
+        <input type="text" placeholder="Enter Your Name">
+        <button>Submit</button>
+
+    </form>
+    
+</body>
+</html>
