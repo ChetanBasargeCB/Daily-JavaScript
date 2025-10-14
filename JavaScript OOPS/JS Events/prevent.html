@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prevent default</title>
     <script>
-        function Submit(){
+        function Submit(e){
+            e.preventDefault()
             alert("Data Posted To Server")
         }
     </script>
@@ -18,7 +19,7 @@
         <h2>“preventDefault()”.</h2>
     </ul>
 
-    <form onsubmit="Submit()">
+    <form onsubmit="Submit(e)">
         <input type="text" placeholder="Enter Your Name">
         <button>Submit</button>
 
