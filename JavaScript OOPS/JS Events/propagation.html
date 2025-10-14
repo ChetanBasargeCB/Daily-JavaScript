@@ -25,8 +25,9 @@
         function NavClick(){
             alert("Nav-bar Clicked (Parent-element)")
         }
-        
-        function BtnClick(){
+        // here we add code to stop propagation
+        function BtnClick(event){
+            event.stopPropagation()
             alert("Btn Clicked (Child-element) ")
         }
     </script>
@@ -40,7 +41,9 @@
     </ul> 
     <div>
         <nav onclick="NavClick()">
-            <button onclick="BtnClick()">Clear</button>
+            
+            <!-- after adding  stopPropagation code  we have to pass event here  -->
+            <button onclick="BtnClick(event)">Clear</button>
         </nav>
     </div>
 
