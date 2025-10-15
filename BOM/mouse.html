@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<script>
+    function hover(){
+        document.getElementById("hover").style.color="red";
+    }
+    function remove(){
+        setTimeout(()=>{
+             document.getElementById("hover").style.background="black";
+        },100)
+       
+    }
+</script>
+<body>
+    <h1>Mouse Event</h1>
+    <ol>
+        <li>Mouse hover & Mouse Out</li>
+        <p id="hover" onmouseover="hover()" onmouseout="remove()">On Mouse hover color will changes and Mouse Out color and bg change </p>
+    </ol>
+     <div>
+        <p>Mouse Down & Mouse Up</p>
+        <img src="https://www.freepnglogos.com/images/fan-16915.html" alt="">
+     </div>
+    
+</body>
+</html>
