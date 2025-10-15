@@ -24,6 +24,17 @@
             img.style.animationTimeFunction="linear"
             img.style.animationIterationCount="infinite"
         }
+
+        
+        function DecreseSpeed(){
+            var img = document.querySelector("img")
+            img.style.animationDuration="3s"
+            img.style.animationTimeFunction="linear"
+            img.style.animationIterationCount="infinite"
+        }
+
+
+        
 </script>
 <!-- Adding style for second example -->
  <style>
@@ -70,9 +81,10 @@
     
     <!-- Exaple of Mouse Down and Up -->
        <h2>2.Mouse Down & Mouse Up</h2>
+       <p>Hold the mouse click on the fan to view Mouse Events</p>
        
      <div>
-        <img onmousedown="IncereseSpeed()" src="Assesets/fan.png" alt="">
+        <img onmousedown="IncereseSpeed()" onmouseup="DecreseSpeed()" src="Assesets/fan.png" alt="">
      </div>
     
 </body>
