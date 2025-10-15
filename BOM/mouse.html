@@ -16,15 +16,54 @@
        
     }
 </script>
+<!-- Adding style for second example -->
+ <style>
+    div{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+    }
+    @keyframes Spin {
+             from {
+
+                transform: rotate(0deg);
+
+            }
+
+            to {
+
+                transform: rotate(360deg);
+
+            }
+
+        
+    }
+
+   img{
+     width: 150px;
+     animation-name: Spin;
+
+     animation-duration: 3s;
+
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+   }
+
+ </style>
 <body>
     <h1>Mouse Event</h1>
-    <ol>
-        <li>Mouse hover & Mouse Out</li>
+
+        <h2>1.Mouse hover & Mouse Out</h2>
         <p id="hover" onmouseover="hover()" onmouseout="remove()">On Mouse hover color will changes and Mouse Out color and bg change </p>
-    </ol>
+    
+    <!-- Exaple of Mouse Down and Up -->
+       <h2>2.Mouse Down & Mouse Up</h2>
+       
      <div>
-        <p>Mouse Down & Mouse Up</p>
-        <img src="https://www.freepnglogos.com/images/fan-16915.html" alt="">
+        <img src="Assesets/fan.png" alt="">
      </div>
     
 </body>
